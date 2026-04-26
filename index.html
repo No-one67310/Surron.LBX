@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Experience the next generation of mobility. SURRON delivers cutting-edge performance, precision engineering, and sustainable future mobility solutions.">
+  <meta name="theme-color" content="#000000">
+  <title>SURRON | Future Mobility Technology</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #000000;
+      color: #ffffff;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .bg-gradient-radial {
+      background: radial-gradient(circle, var(--tw-gradient-from), var(--tw-gradient-via), var(--tw-gradient-to));
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-fade-in-up {
+      animation: fadeInUp 1s ease-out forwards;
+    }
+    .animation-delay-100 { animation-delay: 0.1s; }
+    .animation-delay-300 { animation-delay: 0.3s; }
+    .animation-delay-500 { animation-delay: 0.5s; }
+    .animation-delay-700 { animation-delay: 0.7s; }
+    .animation-delay-1000 { animation-delay: 1s; }
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.6; }
+    }
+    .animate-pulse-glow {
+      animation: pulse-glow 2s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-transparent">
+    <nav class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="#" class="text-xl font-light tracking-[0.3em] text-white hover:text-white/80 transition-colors">
+          SURRON
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center gap-12">
+          <a href="#performance" class="text-sm font-light tracking-widest text-white/60 hover:text-white transition-colors duration-300 uppercase">Performance</a>
+          <a href="#engineering" class="text-sm font-light tracking-widest text-white/60 hover:text-white transition-colors duration-300 uppercase">Engineering</a>
+          <a href="#future-mobility" class="text-sm font-light tracking-widest text-white/60 hover:text-white transition-colors duration-300 uppercase">Future Mobility</a>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="hidden md:block">
+          <a href="#contact" class="px-6 py-2.5 text-xs font-light tracking-widest uppercase border border-white/20 text-white hover:bg-white hover:text-black transition-all duration-300">
+            Discover
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button onclick="toggleMobileMenu()" class="md:hidden relative w-8 h-8 flex flex-col justify-center items-center gap-1.5" aria-label="Toggle menu">
+          <span id="menu-line-1" class="w-6 h-px bg-white transition-all duration-300"></span>
+          <span id="menu-line-2" class="w-6 h-px bg-white transition-all duration-300"></span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden overflow-hidden transition-all duration-500 max-h-0">
+        <div class="flex flex-col gap-6 pt-4 pb-8">
+          <a href="#performance" onclick="closeMobileMenu()" class="text-sm font-light tracking-widest text-white/60 hover:text-white transition-colors uppercase">Performance</a>
+          <a href="#engineering" onclick="closeMobileMenu()" class="text-sm font-light tracking-widest text-white/60 hover:text-white transition-colors uppercase">Engineering</a>
+          <a href="#future-mobility" onclick="closeMobileMenu()" class="text-sm font-light tracking-widest text-white/60 hover:text-white transition-colors uppercase">Future Mobility</a>
+          <a href="#contact" onclick="closeMobileMenu()" class="mt-4 px-6 py-3 text-xs font-light tracking-widest uppercase border border-white/20 text-white text-center hover:bg-white hover:text-black transition-all duration-300">
+            Discover
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+    <!-- Background Grid Pattern -->
+    <div class="absolute inset-0 opacity-20">
+      <div class="absolute inset-0" style="background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 100px 100px;"></div>
+    </div>
+
+    <!-- Ambient Light Effect -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full blur-3xl" style="background: radial-gradient(circle, rgba(255,255,255,0.05), transparent 70%);"></div>
+
+    <!-- Content Container -->
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 text-center">
+      <!-- Pre-title -->
+      <div class="opacity-0 animate-fade-in-up animation-delay-100">
+        <span class="inline-block text-xs font-light tracking-[0.4em] text-white/40 uppercase mb-8">
+          Redefining Mobility
+        </span>
+      </div>
+
+      <!-- Main Glassmorphism Container -->
+      <div class="relative opacity-0 animate-fade-in-up animation-delay-300">
+        <!-- Glassmorphism Panel -->
+        <div class="relative inline-block">
+          <!-- Glass Effect Background -->
+          <div class="absolute inset-0 rounded-2xl border border-white/10" style="background: linear-gradient(to bottom, rgba(255,255,255,0.1), rgba(255,255,255,0.05)); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);"></div>
+          
+          <!-- Inner Glow -->
+          <div class="absolute inset-0 rounded-2xl" style="background: linear-gradient(to top, transparent, rgba(255,255,255,0.05), rgba(255,255,255,0.1));"></div>
+          
+          <!-- Content -->
+          <div class="relative px-12 py-16 md:px-24 md:py-20 lg:px-32 lg:py-24">
+            <h1 class="text-6xl md:text-8xl lg:text-9xl font-extralight tracking-[0.2em] md:tracking-[0.3em] text-white">
+              SURRON
+            </h1>
+            
+            <!-- Subtle Divider -->
+            <div class="w-24 h-px mx-auto mt-8 mb-6" style="background: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent);"></div>
+            
+            <p class="text-sm md:text-base font-light tracking-[0.2em] text-white/50 uppercase">
+              Technology &bull; Performance &bull; Vision
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tagline -->
+      <div class="mt-16 opacity-0 animate-fade-in-up animation-delay-500">
+        <p class="text-lg md:text-xl font-extralight text-white/60 max-w-2xl mx-auto leading-relaxed tracking-wide">
+          Where precision engineering meets the future of sustainable mobility
+        </p>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 opacity-0 animate-fade-in-up animation-delay-700">
+        <a href="#performance" class="group relative px-10 py-4 text-sm font-light tracking-[0.2em] uppercase text-black bg-white hover:bg-white/90 transition-all duration-300">
+          <span class="relative z-10">Explore</span>
+        </a>
+        <a href="#engineering" class="px-10 py-4 text-sm font-light tracking-[0.2em] uppercase text-white border border-white/20 hover:border-white/40 transition-all duration-300">
+          Learn More
+        </a>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-12 left-1/2 -translate-x-1/2 opacity-0 animate-fade-in-up animation-delay-1000">
+        <div class="flex flex-col items-center gap-3">
+          <span class="text-xs font-light tracking-[0.3em] text-white/30 uppercase">
+            Scroll
+          </span>
+          <div class="w-px h-12 animate-pulse-glow" style="background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent);"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Performance Section -->
+  <section id="performance" class="relative py-32 md:py-48 bg-black overflow-hidden">
+    <!-- Subtle Background Pattern -->
+    <div class="absolute inset-0 opacity-30">
+      <div class="absolute inset-0" style="background: radial-gradient(circle at center, rgba(255,255,255,0.02) 0%, transparent 70%);"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center mb-24">
+        <span class="inline-block text-xs font-light tracking-[0.4em] text-white/40 uppercase mb-6">
+          01 — Performance
+        </span>
+        <h2 class="text-4xl md:text-6xl lg:text-7xl font-extralight tracking-tight text-white mb-6">
+          Uncompromising
+          <span class="block mt-2 text-white/40">Power</span>
+        </h2>
+        <div class="w-16 h-px bg-white/20 mx-auto"></div>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10">
+        <!-- Stat 1 -->
+        <div class="relative bg-black p-10 md:p-12 group transition-all duration-500 hover:bg-white/[0.02]">
+          <div class="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="relative">
+            <div class="flex items-baseline gap-2 mb-2">
+              <span class="text-5xl md:text-6xl font-extralight text-white tracking-tight">0-60</span>
+              <span class="text-lg font-light text-white/40">mph</span>
+            </div>
+            <h3 class="text-sm font-light tracking-[0.2em] text-white/70 uppercase mb-3">In 2.8 Seconds</h3>
+            <p class="text-sm font-light text-white/40 leading-relaxed">Instant torque delivery</p>
+            <div class="absolute top-0 right-0 w-8 h-px bg-white/10 group-hover:w-16 transition-all duration-500"></div>
+            <div class="absolute top-0 right-0 w-px h-8 bg-white/10 group-hover:h-16 transition-all duration-500"></div>
+          </div>
+        </div>
+        
+        <!-- Stat 2 -->
+        <div class="relative bg-black p-10 md:p-12 group transition-all duration-500 hover:bg-white/[0.02]">
+          <div class="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="relative">
+            <div class="flex items-baseline gap-2 mb-2">
+              <span class="text-5xl md:text-6xl font-extralight text-white tracking-tight">450</span>
+              <span class="text-lg font-light text-white/40">km</span>
+            </div>
+            <h3 class="text-sm font-light tracking-[0.2em] text-white/70 uppercase mb-3">Range</h3>
+            <p class="text-sm font-light text-white/40 leading-relaxed">Single charge capability</p>
+            <div class="absolute top-0 right-0 w-8 h-px bg-white/10 group-hover:w-16 transition-all duration-500"></div>
+            <div class="absolute top-0 right-0 w-px h-8 bg-white/10 group-hover:h-16 transition-all duration-500"></div>
+          </div>
+        </div>
+        
+        <!-- Stat 3 -->
+        <div class="relative bg-black p-10 md:p-12 group transition-all duration-500 hover:bg-white/[0.02]">
+          <div class="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="relative">
+            <div class="flex items-baseline gap-2 mb-2">
+              <span class="text-5xl md:text-6xl font-extralight text-white tracking-tight">98</span>
+              <span class="text-lg font-light text-white/40">%</span>
+            </div>
+            <h3 class="text-sm font-light tracking-[0.2em] text-white/70 uppercase mb-3">Efficiency</h3>
+            <p class="text-sm font-light text-white/40 leading-relaxed">Energy recapture rate</p>
+            <div class="absolute top-0 right-0 w-8 h-px bg-white/10 group-hover:w-16 transition-all duration-500"></div>
+            <div class="absolute top-0 right-0 w-px h-8 bg-white/10 group-hover:h-16 transition-all duration-500"></div>
+          </div>
+        </div>
+        
+        <!-- Stat 4 -->
+        <div class="relative bg-black p-10 md:p-12 group transition-all duration-500 hover:bg-white/[0.02]">
+          <div class="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="relative">
+            <div class="flex items-baseline gap-2 mb-2">
+              <span class="text-5xl md:text-6xl font-extralight text-white tracking-tight">0.21</span>
+              <span class="text-lg font-light text-white/40">Cd</span>
+            </div>
+            <h3 class="text-sm font-light tracking-[0.2em] text-white/70 uppercase mb-3">Drag Coefficient</h3>
+            <p class="text-sm font-light text-white/40 leading-relaxed">Aerodynamic perfection</p>
+            <div class="absolute top-0 right-0 w-8 h-px bg-white/10 group-hover:w-16 transition-all duration-500"></div>
+            <div class="absolute top-0 right-0 w-px h-8 bg-white/10 group-hover:h-16 transition-all duration-500"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Highlight -->
+      <div class="mt-24 text-center">
+        <p class="text-lg md:text-xl font-extralight text-white/50 max-w-3xl mx-auto leading-relaxed">
+          Every component engineered for maximum efficiency. Every detail optimized for peak performance. 
+          This is what happens when technology serves a singular purpose.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Engineering Section -->
+  <section id="engineering" class="relative py-32 md:py-48 overflow-hidden" style="background: linear-gradient(to bottom, #000000, #050505, #000000);">
+    <!-- Background Lines -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute h-px" style="top: 20%; left: -10%; right: -10%; transform: rotate(-2deg); background: linear-gradient(to right, transparent, rgba(255,255,255,0.05), transparent);"></div>
+      <div class="absolute h-px" style="top: 40%; left: -10%; right: -10%; transform: rotate(-1.5deg); background: linear-gradient(to right, transparent, rgba(255,255,255,0.05), transparent);"></div>
+      <div class="absolute h-px" style="top: 60%; left: -10%; right: -10%; transform: rotate(-1deg); background: linear-gradient(to right, transparent, rgba(255,255,255,0.05), transparent);"></div>
+      <div class="absolute h-px" style="top: 80%; left: -10%; right: -10%; transform: rotate(-0.5deg); background: linear-gradient(to right, transparent, rgba(255,255,255,0.05), transparent);"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="mb-24 md:mb-32">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-end">
+          <div>
+            <span class="inline-block text-xs font-light tracking-[0.4em] text-white/40 uppercase mb-6">
+              02 — Engineering
+            </span>
+            <h2 class="text-4xl md:text-6xl lg:text-7xl font-extralight tracking-tight text-white">
+              Precision
+              <span class="block mt-2 text-white/40">By Design</span>
+            </h2>
+          </div>
+          <div>
+            <p class="text-lg font-extralight text-white/50 leading-relaxed">
+              Where computational precision meets human intuition. Every system, every 
+              component, every line of code working in perfect harmony.
+            </p>
+          </div>
+        </div>
+        <div class="mt-12 w-full h-px" style="background: linear-gradient(to right, rgba(255,255,255,0.2), rgba(255,255,255,0.1), transparent);"></div>
+      </div>
+
+      <!-- Features -->
+      <div class="space-y-px">
+        <!-- Feature 1 -->
+        <div class="group relative">
+          <div class="relative border-t border-white/10 py-12 md:py-16 hover:bg-white/[0.02] transition-colors duration-500">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+              <div class="lg:col-span-1">
+                <span class="text-sm font-light text-white/20 tracking-widest">01</span>
+              </div>
+              <div class="lg:col-span-3">
+                <h3 class="text-2xl md:text-3xl font-extralight text-white tracking-wide">Adaptive Architecture</h3>
+              </div>
+              <div class="lg:col-span-5">
+                <p class="text-base font-light text-white/40 leading-relaxed">Modular platform design enables seamless integration of next-generation technologies without structural compromise.</p>
+              </div>
+              <div class="lg:col-span-3 lg:text-right">
+                <div class="inline-block">
+                  <span class="block text-3xl md:text-4xl font-extralight text-white tracking-tight">12,000+</span>
+                  <span class="text-xs font-light tracking-[0.2em] text-white/30 uppercase">Components</span>
+                </div>
+              </div>
+            </div>
+            <div class="absolute left-0 top-0 w-0 group-hover:w-24 h-px bg-white transition-all duration-500"></div>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="group relative">
+          <div class="relative border-t border-white/10 py-12 md:py-16 hover:bg-white/[0.02] transition-colors duration-500">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+              <div class="lg:col-span-1">
+                <span class="text-sm font-light text-white/20 tracking-widest">02</span>
+              </div>
+              <div class="lg:col-span-3">
+                <h3 class="text-2xl md:text-3xl font-extralight text-white tracking-wide">Neural Processing</h3>
+              </div>
+              <div class="lg:col-span-5">
+                <p class="text-base font-light text-white/40 leading-relaxed">Advanced computational systems process millions of data points in real-time for optimal performance calibration.</p>
+              </div>
+              <div class="lg:col-span-3 lg:text-right">
+                <div class="inline-block">
+                  <span class="block text-3xl md:text-4xl font-extralight text-white tracking-tight">0.001s</span>
+                  <span class="text-xs font-light tracking-[0.2em] text-white/30 uppercase">Response Time</span>
+                </div>
+              </div>
+            </div>
+            <div class="absolute left-0 top-0 w-0 group-hover:w-24 h-px bg-white transition-all duration-500"></div>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="group relative">
+          <div class="relative border-t border-white/10 py-12 md:py-16 hover:bg-white/[0.02] transition-colors duration-500">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+              <div class="lg:col-span-1">
+                <span class="text-sm font-light text-white/20 tracking-widest">03</span>
+              </div>
+              <div class="lg:col-span-3">
+                <h3 class="text-2xl md:text-3xl font-extralight text-white tracking-wide">Carbon Matrix Frame</h3>
+              </div>
+              <div class="lg:col-span-5">
+                <p class="text-base font-light text-white/40 leading-relaxed">Aerospace-grade composite materials deliver unprecedented strength-to-weight ratios for superior handling.</p>
+              </div>
+              <div class="lg:col-span-3 lg:text-right">
+                <div class="inline-block">
+                  <span class="block text-3xl md:text-4xl font-extralight text-white tracking-tight">1,200</span>
+                  <span class="text-xs font-light tracking-[0.2em] text-white/30 uppercase">Torsional Rigidity</span>
+                </div>
+              </div>
+            </div>
+            <div class="absolute left-0 top-0 w-0 group-hover:w-24 h-px bg-white transition-all duration-500"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Visual -->
+      <div class="mt-24 md:mt-32">
+        <div class="relative border border-white/10 overflow-hidden" style="aspect-ratio: 21/9; background: linear-gradient(to bottom, rgba(255,255,255,0.02), transparent);">
+          <!-- Blueprint Grid -->
+          <div class="absolute inset-0 opacity-20" style="background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 40px 40px;"></div>
+          
+          <!-- Center Elements -->
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="relative">
+              <div class="w-48 md:w-64 h-px" style="background: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent);"></div>
+              <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 border border-white/20 rotate-45"></div>
+            </div>
+          </div>
+          
+          <!-- Corner Markers -->
+          <div class="absolute top-4 left-4 w-8 h-8 border-l border-t border-white/10"></div>
+          <div class="absolute top-4 right-4 w-8 h-8 border-r border-t border-white/10"></div>
+          <div class="absolute bottom-4 left-4 w-8 h-8 border-l border-b border-white/10"></div>
+          <div class="absolute bottom-4 right-4 w-8 h-8 border-r border-b border-white/10"></div>
+          
+          <!-- Label -->
+          <div class="absolute bottom-6 left-6 text-xs font-light tracking-[0.3em] text-white/20 uppercase">
+            Technical Specifications
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Future Mobility Section -->
+  <section id="future-mobility" class="relative py-32 md:py-48 bg-black overflow-hidden">
+    <!-- Background Gradient -->
+    <div class="absolute inset-0">
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1200px] h-[600px] rounded-full blur-3xl" style="background: radial-gradient(circle, rgba(255,255,255,0.03), transparent);"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center mb-24 md:mb-32">
+        <span class="inline-block text-xs font-light tracking-[0.4em] text-white/40 uppercase mb-6">
+          03 — Future Mobility
+        </span>
+        <h2 class="text-4xl md:text-6xl lg:text-7xl font-extralight tracking-tight text-white mb-6">
+          Tomorrow&apos;s
+          <span class="block mt-2 text-white/40">Standard</span>
+        </h2>
+        <p class="mt-8 text-lg font-extralight text-white/50 max-w-2xl mx-auto leading-relaxed">
+          We&apos;re not just building vehicles. We&apos;re architecting the future of human mobility.
+        </p>
+      </div>
+
+      <!-- Pillars Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0">
+        <!-- Pillar 1 -->
+        <div class="group relative">
+          <div class="relative h-full p-10 md:p-12 border border-white/10 md:border-l md:border-r-0 hover:bg-white/[0.02] hover:border-white/20 transition-all duration-500">
+            <span class="block text-6xl md:text-7xl font-extralight text-white/5 mb-8 group-hover:text-white/10 transition-colors duration-500">01</span>
+            <h3 class="text-xl md:text-2xl font-light text-white tracking-wide mb-4">Sustainability</h3>
+            <p class="text-sm font-light text-white/40 leading-relaxed">Zero-emission technology that performs without compromise. Setting new standards for responsible innovation.</p>
+            <div class="absolute bottom-0 left-10 right-10 md:left-12 md:right-12 h-px bg-transparent group-hover:bg-white/10 transition-all duration-500"></div>
+          </div>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="group relative">
+          <div class="relative h-full p-10 md:p-12 border border-white/10 md:border-l-0 md:border-r-0 hover:bg-white/[0.02] hover:border-white/20 transition-all duration-500">
+            <span class="block text-6xl md:text-7xl font-extralight text-white/5 mb-8 group-hover:text-white/10 transition-colors duration-500">02</span>
+            <h3 class="text-xl md:text-2xl font-light text-white tracking-wide mb-4">Connectivity</h3>
+            <p class="text-sm font-light text-white/40 leading-relaxed">Seamless integration with smart infrastructure. Your vehicle as an extension of the digital ecosystem.</p>
+            <div class="absolute bottom-0 left-10 right-10 md:left-12 md:right-12 h-px bg-transparent group-hover:bg-white/10 transition-all duration-500"></div>
+          </div>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="group relative">
+          <div class="relative h-full p-10 md:p-12 border border-white/10 md:border-l-0 hover:bg-white/[0.02] hover:border-white/20 transition-all duration-500">
+            <span class="block text-6xl md:text-7xl font-extralight text-white/5 mb-8 group-hover:text-white/10 transition-colors duration-500">03</span>
+            <h3 class="text-xl md:text-2xl font-light text-white tracking-wide mb-4">Autonomy</h3>
+            <p class="text-sm font-light text-white/40 leading-relaxed">Advanced sensing and decision systems. The foundation for tomorrow&apos;s transportation paradigm.</p>
+            <div class="absolute bottom-0 left-10 right-10 md:left-12 md:right-12 h-px bg-transparent group-hover:bg-white/10 transition-all duration-500"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vision Statement -->
+      <div class="mt-24 md:mt-32 text-center">
+        <div class="relative inline-block">
+          <div class="absolute -left-16 md:-left-24 top-1/2 w-12 md:w-20 h-px" style="background: linear-gradient(to right, transparent, rgba(255,255,255,0.2));"></div>
+          <div class="absolute -right-16 md:-right-24 top-1/2 w-12 md:w-20 h-px" style="background: linear-gradient(to left, transparent, rgba(255,255,255,0.2));"></div>
+          <p class="text-2xl md:text-3xl lg:text-4xl font-extralight text-white/70 tracking-wide">
+            The future moves with <span class="text-white">purpose</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="relative py-32 md:py-48 overflow-hidden" style="background: linear-gradient(to bottom, #000000, #0a0a0a);">
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center">
+        <!-- Heading -->
+        <h2 class="text-4xl md:text-6xl lg:text-7xl font-extralight tracking-tight text-white mb-6">
+          Experience
+          <span class="block mt-2 text-white/40">The Future</span>
+        </h2>
+        
+        <p class="mt-8 text-lg font-extralight text-white/50 max-w-xl mx-auto leading-relaxed mb-12">
+          Be among the first to discover what&apos;s next. Register your interest and step into a new era of mobility.
+        </p>
+
+        <!-- Email Input -->
+        <div class="max-w-md mx-auto">
+          <form class="relative" onsubmit="event.preventDefault();">
+            <div class="relative group">
+              <input type="email" placeholder="Enter your email" class="w-full px-6 py-5 bg-transparent border border-white/20 text-white placeholder:text-white/30 text-sm font-light tracking-wide focus:outline-none focus:border-white/40 transition-colors duration-300">
+              <button type="submit" class="absolute right-2 top-1/2 -translate-y-1/2 px-6 py-3 bg-white text-black text-xs font-light tracking-[0.2em] uppercase hover:bg-white/90 transition-colors duration-300">
+                Register
+              </button>
+            </div>
+          </form>
+          
+          <p class="mt-4 text-xs font-light text-white/30 tracking-wide">
+            By registering, you agree to receive updates from SURRON
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="relative py-16 md:py-24 border-t border-white/5" style="background-color: #0a0a0a;">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
+        <!-- Logo & Tagline -->
+        <div class="lg:col-span-4">
+          <a href="#" class="inline-block text-2xl font-light tracking-[0.3em] text-white hover:text-white/80 transition-colors mb-6">
+            SURRON
+          </a>
+          <p class="text-sm font-light text-white/40 leading-relaxed max-w-xs">
+            Pioneering the future of sustainable mobility through innovation, precision, and uncompromising design.
+          </p>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="lg:col-span-2">
+          <h4 class="text-xs font-light tracking-[0.2em] text-white/60 uppercase mb-6">Explore</h4>
+          <ul class="space-y-4">
+            <li><a href="#performance" class="text-sm font-light text-white/40 hover:text-white transition-colors duration-300">Performance</a></li>
+            <li><a href="#engineering" class="text-sm font-light text-white/40 hover:text-white transition-colors duration-300">Engineering</a></li>
+            <li><a href="#future-mobility" class="text-sm font-light text-white/40 hover:text-white transition-colors duration-300">Future Mobility</a></li>
+          </ul>
+        </div>
+
+        <!-- Company Links -->
+        <div class="lg:col-span-2">
+          <h4 class="text-xs font-light tracking-[0.2em] text-white/60 uppercase mb-6">Company</h4>
+          <ul class="space-y-4">
+            <li><a href="#" class="text-sm font-light text-white/40 hover:text-white transition-colors duration-300">About</a></li>
+            <li><a href="#" class="text-sm font-light text-white/40 hover:text-white transition-colors duration-300">Careers</a></li>
+            <li><a href="#" class="text-sm font-light text-white/40 hover:text-white transition-colors duration-300">Press</a></li>
+            <li><a href="#" class="text-sm font-light text-white/40 hover:text-white transition-colors duration-300">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal Links -->
+        <div class="lg:col-span-2">
+          <h4 class="text-xs font-light tracking-[0.2em] text-white/60 uppercase mb-6">Legal</h4>
+          <ul class="space-y-4">
+            <li><a href="#" class="text-sm font-light text-white/40 hover:text-white transition-colors duration-300">Privacy Policy</a></li>
+            <li><a href="#" class="text-sm font-light text-white/40 hover:text-white transition-colors duration-300">Terms of Service</a></li>
+            <li><a href="#" class="text-sm font-light text-white/40 hover:text-white transition-colors duration-300">Cookies</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="lg:col-span-2">
+          <h4 class="text-xs font-light tracking-[0.2em] text-white/60 uppercase mb-6">Contact</h4>
+          <p class="text-sm font-light text-white/40 leading-relaxed">
+            Global Headquarters<br>
+            <span class="text-white/60">info@surron.com</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-xs font-light text-white/30 tracking-wide">
+          &copy; 2026 SURRON. All rights reserved.
+        </p>
+        <div class="flex items-center gap-8">
+          <span class="text-xs font-light text-white/20 tracking-[0.2em] uppercase">
+            Designed for Tomorrow
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    let mobileMenuOpen = false;
+    
+    function toggleMobileMenu() {
+      mobileMenuOpen = !mobileMenuOpen;
+      const menu = document.getElementById('mobile-menu');
+      const line1 = document.getElementById('menu-line-1');
+      const line2 = document.getElementById('menu-line-2');
+      
+      if (mobileMenuOpen) {
+        menu.style.maxHeight = '384px';
+        line1.style.transform = 'rotate(45deg) translateY(3px)';
+        line2.style.transform = 'rotate(-45deg) translateY(-3px)';
+      } else {
+        menu.style.maxHeight = '0';
+        line1.style.transform = 'rotate(0) translateY(0)';
+        line2.style.transform = 'rotate(0) translateY(0)';
+      }
+    }
+    
+    function closeMobileMenu() {
+      mobileMenuOpen = false;
+      const menu = document.getElementById('mobile-menu');
+      const line1 = document.getElementById('menu-line-1');
+      const line2 = document.getElementById('menu-line-2');
+      menu.style.maxHeight = '0';
+      line1.style.transform = 'rotate(0) translateY(0)';
+      line2.style.transform = 'rotate(0) translateY(0)';
+    }
+
+    // Navbar Scroll Effect
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+        navbar.style.backdropFilter = 'blur(20px)';
+        navbar.style.borderBottom = '1px solid rgba(255, 255, 255, 0.05)';
+      } else {
+        navbar.style.backgroundColor = 'transparent';
+        navbar.style.backdropFilter = 'none';
+        navbar.style.borderBottom = 'none';
+      }
+    });
+
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+      threshold: 0.2,
+      rootMargin: '0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in-up');
+          entry.target.style.opacity = '1';
+        }
+      });
+    }, observerOptions);
+
+    // Observe all sections for animations
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+
+</body>
+</html>
